@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^2.3.4",
     "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
     "@mantine/core": "^5.4.1",
     "@mantine/hooks": "^5.4.1",
     "@react-google-maps/api": "^2.13.1",
@@ -15,6 +17,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "azure-maps-control": "^2.2.0",
+    "framer-motion": "^7.3.6",
     "react": "^18.2.0",
     "react-azure-maps": "^0.4.4",
     "react-dom": "^18.2.0",
