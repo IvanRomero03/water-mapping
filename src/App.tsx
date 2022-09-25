@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import useRef, { useState } from "react";
 import styles from "./styles/Home.module.css";
-import { Tabs, Text, Box, Checkbox, Divider } from "@mantine/core";
+import { Tabs, Text, Box, Checkbox, Divider, Container } from "@mantine/core";
 import AzureLayer from "./components/AzureLayer";
 
 function App() {
@@ -50,7 +50,8 @@ function App() {
                   <p>
                     Utilizamos un modelo de inteligancia artificial el cual es
                     capaz de predecir la calidad del agua a partir de diferentes
-                    variables
+                    variables al mismo timepo generamos un modelo el cual identifica 
+                    las zonas con mayor precipitacion
                   </p>
                 </a>
 
@@ -67,9 +68,9 @@ function App() {
                   href="https://github.com/vercel/next.js/tree/canary/examples"
                   className={styles.card}
                 >
-                  <h2>Examples &rarr;</h2>
+                  <h2>Modelo fisico del dispositivo &rarr;</h2>
                   <p>
-                    Discover and deploy boilerplate example Next.js projects.
+                    El dispostivo SSS esta compuesto por un sensor de flujo y 
                   </p>
                 </a>
 
@@ -118,28 +119,12 @@ function App() {
 
           <Divider size={20} />
 
-          <Box
-            sx={(theme) => ({
-              backgroundColor:
-                theme.colorScheme === "dark"
-                  ? theme.colors.dark[6]
-                  : theme.colors.gray[0],
-              textAlign: "center",
-              padding: theme.spacing.xl,
-              borderRadius: theme.radius.md,
-              cursor: "pointer",
-
-              "&:hover": {
-                backgroundColor:
-                  theme.colorScheme === "dark"
-                    ? theme.colors.dark[5]
-                    : theme.colors.gray[1],
-              },
-            })}
-          >
-            AGREGRAR HEATMAP
+          <Container size="lg">
+          
+            <div style={{width: "300px"}}>
             <AzureLayer />
-          </Box>
+            </div>
+          </Container>
         </Tabs.Panel>
         <Tabs.Panel value="Calidad" pt="xs">
           <Checkbox.Group
@@ -161,27 +146,12 @@ function App() {
 
           <Divider size={20} />
 
-          <Box
-            sx={(theme) => ({
-              backgroundColor:
-                theme.colorScheme === "dark"
-                  ? theme.colors.dark[6]
-                  : theme.colors.gray[0],
-              textAlign: "center",
-              padding: theme.spacing.xl,
-              borderRadius: theme.radius.md,
-              cursor: "pointer",
-
-              "&:hover": {
-                backgroundColor:
-                  theme.colorScheme === "dark"
-                    ? theme.colors.dark[5]
-                    : theme.colors.gray[1],
-              },
-            })}
-          >
-            AGREGRAR HEATMAP
-          </Box>
+          <Container size="lg">
+          
+            <div style={{width: "300px"}}>
+            <AzureLayer />
+            </div>
+          </Container>
         </Tabs.Panel>
 
         <Tabs.Panel value="Precipitacion" pt="xs">
@@ -203,26 +173,12 @@ function App() {
           </Checkbox.Group>
 
           <Divider size={20} />
-
-          <Box
-            sx={(theme) => ({
-              backgroundColor:
-                theme.colorScheme === "dark"
-                  ? theme.colors.dark[6]
-                  : theme.colors.gray[0],
-              textAlign: "center",
-              padding: theme.spacing.xl,
-              borderRadius: theme.radius.md,
-              cursor: "pointer",
-
-              "&:hover": {
-                backgroundColor:
-                  theme.colorScheme === "dark"
-                    ? theme.colors.dark[5]
-                    : theme.colors.gray[1],
-              },
-            })}
-          ></Box>
+          <Container size="lg">
+          
+          <div style={{width: "300px"}}>
+          <AzureLayer />
+          </div>
+        </Container>
         </Tabs.Panel>
       </Tabs>
     </>

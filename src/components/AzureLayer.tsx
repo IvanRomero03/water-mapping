@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import {
   AzureMapsProvider,
   AzureMap,
@@ -15,8 +15,8 @@ import { Text } from "@mantine/core";
 
 export const wrapperStyles = {
   map: {
-    height: "200vh",
-    width: "200vw",
+    height: "100vh",
+    width: "100vw",
   },
   wrapper: {
     padding: "15px",
@@ -25,16 +25,16 @@ export const wrapperStyles = {
   buttonContainer: {
     display: "grid",
     gridAutoFlow: "column",
-    gridGap: "10px",
+    gridGap: "7px",
     gridAutoColumns: "max-content",
-    padding: "10px 0",
+    padding: "7px 0",
   },
   buttons: {
-    padding: "15px",
+    padding: "10px",
     flex: 1,
   },
   popupStyles: {
-    padding: "20px",
+    padding: "15px",
     color: "black",
   },
 };
@@ -60,7 +60,7 @@ const option: IAzureMapOptions = {
     subscriptionKey: "WwfO6BKjULP5qQn1LbqzBb84wB9cXN7XnOMiK5MKlkc",
   },
   center: [-100.290987, 25.6515911],
-  zoom: 6,
+  zoom: 7,
   view: "Auto",
 };
 const AzureLayer: React.FC = () => {
@@ -70,30 +70,32 @@ const AzureLayer: React.FC = () => {
 
   return (
     <>
-      <div style={wrapperStyles.map}>
-        <Text>
-          This sample shows how to add layers and global map events. Open dev
-          tools console and click on map.
-        </Text>
-        <AzureMapsProvider>
-          <div style={styles.map}>
-            <AzureMap options={option}>
-              <AzureMapDataSourceProvider id={"LayerExample2 DataSource"}>
-                <AzureMapLayerProvider
-                  id={"LayerExample2 HeatMap"}
-                  options={{}}
-                  type={"HeatLayer"}
-                />
-                <AzureMapFeature
-                  id={"LayerExample2 MapFeature2"}
-                  key={"dddd"}
-                  type="MultiPoint"
-                  coordinates={[point, point1, point2]}
-                />
-              </AzureMapDataSourceProvider>
-            </AzureMap>
-          </div>
-        </AzureMapsProvider>
+      <div style={ wrapperStyles.map}>
+          <AzureMapsProvider>
+            <div style={styles.map}>
+            <div style={{ height: '300px'}}>
+              <AzureMap options={option} >
+                <AzureMapDataSourceProvider id={"LayerExample2 DataSource"}>
+                  <AzureMapLayerProvider
+                    id={"LayerExample2 HeatMap"}
+                    options={{}}
+                    type={"HeatLayer"}
+                    
+                  />
+                  <div style = {{width: '100%'}}>
+                  <AzureMapFeature
+                    id={"LayerExample2 MapFeature2"}
+                    key={"dddd"}
+                    type="MultiPoint"
+                    coordinates={[point, point1, point2]}
+                  />
+                  </div>
+                </AzureMapDataSourceProvider>
+              </AzureMap>
+            </div>
+            </div>
+          </AzureMapsProvider>
+        
       </div>
     </>
   );
@@ -102,7 +104,13 @@ const AzureLayer: React.FC = () => {
 const styles = {
   map: {
     height: 300,
-    marginBottom: 50,
+    width: "100%",
+    size: "100%",
+    innerHeight : "100%",
+    innerWidth : "100%",
+    outerHeight : "100%",
+    outerWidth : "100%",
+    
   },
 };
 
