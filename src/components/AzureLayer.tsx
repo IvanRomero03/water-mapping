@@ -12,6 +12,7 @@ import {
 import { AuthenticationType, data } from "azure-maps-control";
 // import { key } from "../key";
 import { Text } from "@mantine/core";
+import { idText } from "typescript";
 
 export const wrapperStyles = {
   map: {
@@ -64,9 +65,25 @@ const option: IAzureMapOptions = {
   view: "Auto",
 };
 const AzureLayer: React.FC = () => {
-  const point = new data.Position(-80.01, 35.01, 1);
-  const point1 = new data.Position(-100.01, 45.01);
-  const point2 = new data.Position(-100.01, 45.01);
+  const point1 = new data.Position(100.2909867, 25.6515911);
+  const point2 = new data.Position(100.270123, 25.667457);
+  const point3 = new data.Position(100.28967, 25.621341);
+  const point4 = new data.Position(100.512357, 25.56342134);
+  const point5 = new data.Position(-100.23569,	25.215239);
+  const point6 = new data.Position(-100.242347,	25.735235);
+  const point7 = new data.Position(-100.4523123,	25.5945565);
+  const point15 = new data.Position(-100.4523123,	25.5945565);
+  const point8 = new data.Position(-100.301231,	25.663747);
+  const point9 = new data.Position(100.32164, 25.65134);
+  const point16 = new data.Position(100.512357, 25.846532);
+  const point17 = new data.Position(100.512357, 25.846532);
+  const point18 = new data.Position(100.512357, 25.846532);
+  const point11 = new data.Position(-100.30165,	25.65132);
+  const point12 = new data.Position(-100.423165,	25.53265);
+  const point13 = new data.Position(-100.531143,	25.756173);
+  const point19 = new data.Position(-100.215641,	25.723165);
+  const point20 = new data.Position(-100.215641,	25.723165);
+  const point10 = new data.Position(-100.215641,	25.723165);
 
   return (
     <>
@@ -87,7 +104,7 @@ const AzureLayer: React.FC = () => {
                     id={"LayerExample2 MapFeature2"}
                     key={"dddd"}
                     type="MultiPoint"
-                    coordinates={[point, point1, point2]}
+                    coordinates={[point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11, point12, point13, point15, point16, point17, point18, point19, point20]}
                   />
                   </div>
                 </AzureMapDataSourceProvider>
@@ -113,5 +130,7 @@ const styles = {
     
   },
 };
+
+
 
 export default AzureLayer;

@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import useRef, { useState } from "react";
 import styles from "./styles/Home.module.css";
-import { Tabs, Text, Box, Checkbox, Divider, Container } from "@mantine/core";
+import { Tabs, Text, Box, Checkbox, Divider, Container, BackgroundImage  } from "@mantine/core";
 import AzureLayer from "./components/AzureLayer";
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
         </Tabs.List>
 
         <Tabs.Panel value="Home" pt="xs">
+        
           <div className={styles.container}>
             <head>
               <title>ORG NAME</title>
