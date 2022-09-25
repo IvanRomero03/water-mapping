@@ -69,52 +69,68 @@ const AzureLayer: React.FC = () => {
   const point2 = new data.Position(100.270123, 25.667457);
   const point3 = new data.Position(100.28967, 25.621341);
   const point4 = new data.Position(100.512357, 25.56342134);
-  const point5 = new data.Position(-100.23569,	25.215239);
-  const point6 = new data.Position(-100.242347,	25.735235);
-  const point7 = new data.Position(-100.4523123,	25.5945565);
-  const point15 = new data.Position(-100.4523123,	25.5945565);
-  const point8 = new data.Position(-100.301231,	25.663747);
+  const point5 = new data.Position(-100.23569, 25.215239);
+  const point6 = new data.Position(-100.242347, 25.735235);
+  const point7 = new data.Position(-100.4523123, 25.5945565);
+  const point15 = new data.Position(-100.4523123, 25.5945565);
+  const point8 = new data.Position(-100.301231, 25.663747);
   const point9 = new data.Position(100.32164, 25.65134);
   const point16 = new data.Position(100.512357, 25.846532);
   const point17 = new data.Position(100.512357, 25.846532);
   const point18 = new data.Position(100.512357, 25.846532);
-  const point11 = new data.Position(-100.30165,	25.65132);
-  const point12 = new data.Position(-100.423165,	25.53265);
-  const point13 = new data.Position(-100.531143,	25.756173);
-  const point19 = new data.Position(-100.215641,	25.723165);
-  const point20 = new data.Position(-100.215641,	25.723165);
-  const point10 = new data.Position(-100.215641,	25.723165);
+  const point11 = new data.Position(-100.30165, 25.65132);
+  const point12 = new data.Position(-100.423165, 25.53265);
+  const point13 = new data.Position(-100.531143, 25.756173);
+  const point19 = new data.Position(-100.215641, 25.723165);
+  const point20 = new data.Position(-100.215641, 25.723165);
+  const point10 = new data.Position(-100.215641, 25.723165);
 
   return (
-    <>
-      <div style={ wrapperStyles.map}>
-          <AzureMapsProvider>
-            <div style={styles.map}>
-            <div style={{ height: '300px'}}>
-              <AzureMap options={option} >
-                <AzureMapDataSourceProvider id={"LayerExample2 DataSource"}>
-                  <AzureMapLayerProvider
-                    id={"LayerExample2 HeatMap"}
-                    options={{}}
-                    type={"HeatLayer"}
-                    
-                  />
-                  <div style = {{width: '100%'}}>
-                  <AzureMapFeature
-                    id={"LayerExample2 MapFeature2"}
-                    key={"dddd"}
-                    type="MultiPoint"
-                    coordinates={[point1, point2, point3, point4, point5, point6, point7, point8, point9, point10, point11, point12, point13, point15, point16, point17, point18, point19, point20]}
-                  />
-                  </div>
-                </AzureMapDataSourceProvider>
-              </AzureMap>
-            </div>
-            </div>
-          </AzureMapsProvider>
-        
+    <AzureMapsProvider>
+      <div
+        style={{
+          height: 400,
+          width: "100%",
+          border: "1px solid lightgray",
+          alignContent: "center",
+        }}
+      >
+        <AzureMap options={option}>
+          <AzureMapDataSourceProvider id={"LayerExample2 DataSource"}>
+            <AzureMapLayerProvider
+              id={"LayerExample2 HeatMap"}
+              options={{}}
+              type={"HeatLayer"}
+            />
+            <AzureMapFeature
+              id={"LayerExample2 MapFeature2"}
+              type="MultiPoint"
+              coordinates={[
+                point1,
+                point2,
+                point3,
+                point4,
+                point5,
+                point6,
+                point7,
+                point8,
+                point9,
+                point10,
+                point11,
+                point12,
+                point13,
+                point15,
+                point16,
+                point17,
+                point18,
+                point19,
+                point20,
+              ]}
+            />
+          </AzureMapDataSourceProvider>
+        </AzureMap>
       </div>
-    </>
+    </AzureMapsProvider>
   );
 };
 
@@ -123,14 +139,11 @@ const styles = {
     height: 300,
     width: "100%",
     size: "100%",
-    innerHeight : "100%",
-    innerWidth : "100%",
-    outerHeight : "100%",
-    outerWidth : "100%",
-    
+    innerHeight: "100%",
+    innerWidth: "100%",
+    outerHeight: "100%",
+    outerWidth: "100%",
   },
 };
-
-
 
 export default AzureLayer;
