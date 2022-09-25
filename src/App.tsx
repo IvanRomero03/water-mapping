@@ -46,7 +46,7 @@ function App() {
         </VStack>
       </Flex>
       <HStack w="100%" spacing={0} mt="2%" align={"flex-start"}>
-        <Box w="33%" background="green" borderRadius={"md"}>
+        <Box w="33%" background="#BAD1BD" borderRadius={"md"}>
           <Desplazable
             title="Antecedentes"
             descripcion="Durante el año del 2022 el estado de Nuevo León se vio en una situación en la cual el agua proporcionada por el gobierno
@@ -54,14 +54,14 @@ function App() {
             "
           />
         </Box>
-        <Box w="34%" background="blue">
+        <Box w="34%" background="#DBD5C3">
           <Desplazable
             title="Sensores"
             descripcion="El prósito de este proyecto es ayudar a las comunidades que se vean en situaciones similares, tener un recurso al cuál acudir
             tanto para la calidad del agua como el flujo de la misma"
           />
         </Box>
-        <Box w="33%" background="teal">
+        <Box w="33%" background="#C3C3DB">
           <Desplazable
             title="Inteligencia Artificial"
             descripcion="Se utilizó un modelo de inteligencia artificial para predecir la precipitacion de la zona y determinar la potabilidad del agua"
@@ -71,7 +71,7 @@ function App() {
       <Flex w="100%" justify={"center"} align={"center"}>
         <VStack m="2%" spacing={8}>
           <Heading>Prototipo</Heading>
-          <Image src="./foto2.jpeg" alt={"Modelo"} height={360} />
+          <Image src="./foto22.jpeg" alt={"Modelo"} height={360} />
           <Divider />
           <Text>
             El prototipo se realizó con un microcontrolador NodeMCU, un sensor
@@ -89,6 +89,13 @@ function App() {
           <Text>
             El diseño está hecho para una fácil instalación y un bajo costo.
           </Text>
+          <Divider />
+          <Image
+            src="./foto2.jpeg"
+            alt={"modelo2"}
+            height={360}
+            fit="contain"
+          />
         </VStack>
       </Flex>
     </>
