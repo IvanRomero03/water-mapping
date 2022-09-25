@@ -3,7 +3,6 @@ import "./App.css";
 import useRef, { useState } from "react";
 import styles from "./styles/Home.module.css";
 import { Tabs, Text, Box, Checkbox, Divider } from "@mantine/core";
-import GoogleHeatMap from "./components/GoogleHeatMap";
 import AzureLayer from "./components/AzureLayer";
 
 function App() {

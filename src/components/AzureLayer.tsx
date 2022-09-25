@@ -15,7 +15,8 @@ import { Text } from "@mantine/core";
 
 export const wrapperStyles = {
   map: {
-    height: "350px",
+    height: "200vh",
+    width: "200vw",
   },
   wrapper: {
     padding: "15px",
@@ -58,8 +59,8 @@ const option: IAzureMapOptions = {
     authType: "subscriptionKey" as any,
     subscriptionKey: "WwfO6BKjULP5qQn1LbqzBb84wB9cXN7XnOMiK5MKlkc",
   },
-  center: [-100.01, 45.01],
-  zoom: 2,
+  center: [-100.290987, 25.6515911],
+  zoom: 6,
   view: "Auto",
 };
 const AzureLayer: React.FC = () => {
